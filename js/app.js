@@ -19,17 +19,11 @@ $(function () {
 				$(t[i]).html(valeur);
 			}
 	});
+});
 
-		$.getJSON('http://vps227573.ovh.net/u-11.json', function(data) {
-		    var FullName = Mustache.to_html('{{first_name }} {{last_name }}', data);
-		   // var rendered = Mustache.render(template, data);
-		    $('h1').html(FullName);
+$.getJSON('http://vps227573.ovh.net/u-11.json', function(data) {
+    var template = $('#template').html();
+    var rendered = Mustache.render(template, data);
+    $('body').html(rendered);
+});
 
-		    var metier = Mustache.to_html('{{occupation}}', data);
-		    $('h2').html(metier);
-
-		    var Contact = Mustache.to_html('contact {{email}} {{website}}', data);
-		    $('h3').html(Contact);
-		});
-
-	});
