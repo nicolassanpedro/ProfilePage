@@ -6,6 +6,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="node_modules/mustache/mustache.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	
 	
@@ -15,8 +16,8 @@
 <div class="haut">
 	<img src="bender.jpg">
 	<div id="title">
-		<br><span elt="first_name"></span> <span elt="last_name"></span></br>
-		<span elt="contact"></span>
+		<h1><span {{ FullName }}></span></h1>
+		<h2><span {{ metier }}></span></h2>
 		<p> Dans la vie deux mots t'ouvriront toutes les portes : "Pousser et tirer" !! </p>
 	</div>
 </div>
@@ -31,7 +32,10 @@
 		<br> <a href="parts/lorem3.html" class="conta">Contacts </a></br>
 	</div>
 	</div>
+	<p class="bas">
+		<h3><span {{ Contact }}></span></h3>
+	</p>
 </div>	
-	
+
 </body>
 </html>
