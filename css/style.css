@@ -68,3 +68,21 @@ h2 {
 	font-size: 17px;
 	font-family: Verdana;
 }
+#conteneur {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0,0,0,0.5);
+	display: none;
+}
+#contact {
+	position: fixed;
+	top: 65%;
+	left: 28%;
+	background-color: white;
+	width: 400px;
+	height: 200px;
+}
+.invisible {
+	display: none;
+}

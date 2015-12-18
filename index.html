@@ -3,43 +3,63 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
-	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="node_modules/mustache/mustache.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
 	
 	
 
 </head>
 <body>
-	<script id="template" type="x-tmp1-mustache">
-	<div class="haut">
-		<img src="bender.jpg">
-		<div id="title">
-			<h1> {{first_name }} {{last_name}}</h1>
-			<h2>{{ occupation }}</h2>
-			<h2>{{contact.email}}</h2>
-			<p> Dans la vie deux mots touvriront toutes les portes : "Pousser et tirer" !! </p>
-		</div>
-	</div>
-	<div class="container">
 
-		<div id="par1">
-			
+	<script id="template" type="x-tmp1-mustache">
+		<div class="haut">
+			<img src="bender.jpg">
+			<div id="title">
+				<h1> {{first_name }} {{last_name}}</h1>
+				<h3>{{ occupation }}</h3>
+				<h3>{{contact.email}}</h3>
+				<p> Dans la vie deux mots touvriront toutes les portes : "Pousser et tirer" !! </p>
+			</div>
 		</div>
-		<div id="par2">
-			<br> Menu :</br>
-			<br> <a href="parts/lorem1.html" class="proj">Projets </a></br>
-			<br> <a href="parts/lorem2.html" class="badg">Badges </a></br>
-			<br> <a href="parts/lorem3.html" class="conta">Contacts </a></br>
+		<div class="container">
+
+			<div id="par1">
+				
+				<p id="lorem1" class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque, ipsa vitae nemo dolor praesentium qui. Hic reiciendis maxime, ex magnam, exercitationem atque expedita tempora, omnis soluta pariatur tenetur quas.
+				</p>
+
+				
+				<p id="lorem2" class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto optio modi unde nam excepturi illo, sequi officia repudiandae, illum nulla quaerat nihil. Sunt, cupiditate alias. Itaque laudantium error eligendi!
+				</p>
+
+				
+				<p id="lorem3" class="invisible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea odit ipsa aspernatur rem harum corporis optio quis sequi, impedit ullam vero necessitatibus autem modi veniam dolorum. Eaque ipsam nisi veniam.3
+				</p>
+
+			</div>
+			<div id="par2">
+				<br> Menu :</br>
+				<br> <a href="#lorem1" class="proj">Projets </a></br>
+				<br> <a href="#lorem2" class="badg">Badges </a></br>
+				<br> <a href="#contact" class="conta">Contacts </a></br>
+			</div>
 		</div>
+		<div id="conteneur">
+
+			<div id="contact"><button id="fermer">X</button>
+
+				<p>{{contact.email}}</p>
+				<br><p>{{contact.website}}</p></br>
+
+			</div>
+
 		</div>
-		<p class="bas">
-			<h3><span {{ Contact }}></span></h3>
-		</p>
+		
 	</div>
-	</script>	
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script src="node_modules/mustache/mustache.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
+</script>	
 </body>
 </html>
