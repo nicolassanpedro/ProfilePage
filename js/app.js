@@ -1,8 +1,8 @@
-
+"use strict"
 $(document).ready(function() {
     
     $('a').on('click', function(event) { 
-    	event.preventDefault(); 
+    	event.defaultPrevented(); 
     	var val = $(this).attr('href');
        	$('#par1').load(val);
     });
@@ -21,9 +21,10 @@ $(function () {
 	});
 });
 
-$.getJSON('http://vps227573.ovh.net/u-11.json', function(data) {
+$.getJSON('http://s.idsympa.com/u-11.json', function(data) {
     var template = $('#template').html();
     var rendered = Mustache.render(template, data);
     $('body').html(rendered);
+
 });
 
