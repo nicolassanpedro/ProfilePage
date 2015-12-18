@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Profile Page</title>
-	
+	<link href='https://fonts.googleapis.com/css?family=Vollkorn:400italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script src="node_modules/mustache/mustache.js"></script>
@@ -19,11 +19,20 @@
 		<div class="haut">
 			<img src="bender.jpg">
 			<div id="title">
-				<h1> {{first_name }} {{last_name}}</h1>
-				<h3>{{ occupation }}</h3>
-				<h3>{{contact.email}}</h3>
+				<h1>{{first_name }} {{last_name}}</h1>
+				<h3>métier: {{ occupation }}</h3>
 				<p> Dans la vie deux mots touvriront toutes les portes : "Pousser et tirer" !! </p>
 			</div>
+		</div>
+		<div id="conteneur">
+
+			<div id="contact"><button id="fermer">X</button>
+
+				<p>Adresse email: {{contact.email}}</p>
+				<br><p>Site web: {{contact.website}}</p></br>
+
+			</div>
+
 		</div>
 		<div class="container">
 
@@ -48,16 +57,7 @@
 				<br> <a href="#contact" class="conta">Contacts </a></br>
 			</div>
 		</div>
-		<div id="conteneur">
-
-			<div id="contact"><button id="fermer">X</button>
-
-				<p>{{contact.email}}</p>
-				<br><p>{{contact.website}}</p></br>
-
-			</div>
-
-		</div>
+		
 		
 	</div>
 </script>	
